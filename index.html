@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./map_style.css">
+  <link rel="stylesheet" type="text/css" href="./contributions_style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <title>Sombras</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <div class="contributions-justify-wrapper" id="contributionsJustifyWrapper">
+    <div class="contributions-border-wrapper">
+      <div class="contributions-wrapper">
+        <form id="contributionForm" action="https://script.google.com/macros/s/AKfycbwKW3QIR6X67ZuWmWH5o6xz2d5fhftUuLjvZDMN6vCF4EHYIbgL9cMNKFspXiTRONwC2Q/exec" method="POST" enctype="multipart/form-data">
+          <h1 class="form-title">¿Encontraste otra sombra?</h1>
+          <input type="text" name="name" required placeholder="Tu nombre" maxlength="32">
+          <input type="email" name="email" placeholder="Tu mail (opcional)" maxlength="100">
+          <textarea name="message" required placeholder="¿Dónde está? ¿Cuándo la viste? ¿Qué opínás de ella?" maxlength="1024"></textarea>
+          <div class="file-upload-wrapper">
+            <button type="button" class="file-upload-button" tabindex="0" for="fileInput" id="customFileButton">Subí una foto (opcional)</button>
+            <input type="file" name="file" accept=".jpg,.jpeg,.png" tabindex="-1" id="fileInput" class="file-upload-input">
+            <p class="file-upload-text">Formatos soportados: JPEG, PNG (hasta 10MB)</p>
+            <p class="file-name" id="fileName">...</p>
+          </div>
+          <input type="hidden" name="base64" id="base64">
+          <button type="submit">Enviar</button>
+          <span id="statusText">ദ്ദി(• ᴗ -)✧</span>
+        </form>
+        <h2 class="contributions-title">Historial de aportes</h2>
+        <div class="contributions" id="contributions"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="map"></div>
+  <div class="overlay" id="overlay">
+    <div class="slideshow" id="slideshow">
+      <div class="image-wrapper" id="imageWrapper">
+        <div class="image" id="image">
+          <img class="image-img" id="imageImg" src=""">
+        </div>
+        <p class="image-text" id="imageText"></p>
+      </div>
+    </div>
+    <div class="info-slider-wrapper" id="infoSliderWrapper">
+      <p class="info" id="info"></p>
+      <div class="slider-wrapper" id="sliderWrapper">
+        <div class="previous-image-button" id="previousImageButton" title="Flecha ←">
+          <svg class="previous-image-button-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m314-440 114 114q12 12 11.5 28T428-270q-12 12-28.5 12.5T371-269L188-452q-12-12-12-28t12-28l183-183q12-12 28.5-11.5T428-690q11 12 11.5 28T428-634L314-520h446q17 0 28.5 11.5T800-480q0 17-11.5 28.5T760-440H314Z"/></svg>
+        </div>
+        <p class="image-index-info" id="imageIndexInfo"></p>
+        <div class="next-image-button" id="nextImageButton" title="Flecha →">
+          <svg class="next-image-button-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M646-440H200q-17 0-28.5-11.5T160-480q0-17 11.5-28.5T200-520h446L532-634q-12-12-11.5-28t11.5-28q12-12 28.5-12.5T589-691l183 183q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13L589-269q-12 12-28.5 11.5T532-270q-11-12-11.5-28t11.5-28l114-114Z"/></svg>
+        </div>
+      </div> 
+    </div>
+    <div class="close-button" id="closeButton" title="Esc">
+      <svg class="close-button-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-424 284-228q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536-480l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-424Z"/></svg>
+    </div>
+  </div>
+</body>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src=" https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js "></script>
+<script type="text/javascript" src="./map.js"></script>
+<script type="text/javascript" src="./contributions.js"></script>
+</html>

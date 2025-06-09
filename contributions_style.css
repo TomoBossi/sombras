@@ -1,0 +1,175 @@
+.contributions-justify-wrapper {
+  height: 100%;
+  max-width: min(28%, 500px);
+  display: grid;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  font-size: 10px;
+  user-select: none;
+}
+
+.contributions-border-wrapper {
+  display: block;
+  border-radius: 0;
+  border-left: 1px solid #444;
+  padding: 10px;
+  background-color: #141414;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+.contributions-wrapper {
+  margin: 0;
+}
+
+form {
+  background-color: #2d2d2d;
+  padding: 10px;
+  padding-bottom: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+
+textarea,
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  color: #3a3a3a;
+  font-size: 10px;
+  background-color: hsl(0, 0%, 87%);
+  margin-bottom: 10px;
+  border: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 128px;
+}
+
+button,
+.file-upload-button {
+  font-size: 10px;
+  color: white;
+  background-color: #3278a4;
+  padding: 8px 12px;
+  cursor: pointer;
+  width: auto;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.file-upload-button {
+  margin-bottom: 8px;
+}
+
+button:hover,
+file-upload-button:hover {
+  background-color: #2b5b7b;
+}
+
+.contributions {
+  display: grid;
+  margin: 0;
+  gap: 10px;
+}
+
+.message {
+  background: #2d2d2d;;
+  padding: 10px;
+  padding-bottom: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.message-name {
+  font-weight: 700;
+  font-size: 10px;
+  margin: 0;
+}
+
+.message-date {
+  font-size: 9px;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+.message-email {
+  font-style: italic;
+  user-select: text;
+  font-size: 10px;
+  color: #b0b0b0;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.message-text {
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 10px;
+  display: block;
+  margin-bottom: 10px;
+  user-select: text;
+}
+
+.message img {
+  max-width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-title,
+.contributions-title {
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.file-upload-text,
+.file-name {
+  font-size: 9px;
+  margin-bottom: 0;
+}
+
+.file-name,
+#statusText {
+  font-size: 9px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#statusText {
+  color: #a0a0a0;
+  margin-left: 8px;
+  margin-bottom: 10px;
+}
+
+.file-upload-input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+}
+
+.dark-hr {
+  border: none;
+  border-top: 1px dashed #a0a0a0;
+  margin-bottom: 10px;
+}
+
+.reply-arrow {
+  font-weight: 700;
+  color: #3278a4;
+  margin-bottom: 10px;
+}
