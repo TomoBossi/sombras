@@ -79,7 +79,7 @@ function showImage(entry, index) {
 
   document.getElementById("imageIndexInfo").innerHTML = `Imagen ${index + 1}/${entry.images.length}`;
   document.getElementById("imageImg").src = image.url;
-  const src = image.srcUrl ? `<a href="${image.srcUrl}" target="_blank">${image.src}</a>` : image.src
+  const src = image.srcUrl ? `<a href="${image.srcUrl}" target="_blank">${image.src}</a>` : image.src;
   document.getElementById("imageText").innerHTML = `<strong>Fecha:</strong> ${dateStr}<br><strong>Fuente:</strong> ${src}`;
 }
 
@@ -108,10 +108,10 @@ document.addEventListener("keydown", (e) => {
       closeOverlay();
       break;
     case "ArrowLeft":
-      nextImage(-1)
+      nextImage(-1);
       break;
     case "ArrowRight":
-      nextImage()
+      nextImage();
       break;
   }
 });
