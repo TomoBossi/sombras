@@ -1,8 +1,3 @@
-const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Windows Phone|Opera Mini/i.test(navigator.userAgent);
-if (isMobile) {
-  document.getElementById("contributionsJustifyWrapper").style.display = "none";
-}
-
 const form = document.getElementById("contributionForm");
 const base64Input = document.getElementById("base64");
 const statusText = document.getElementById("statusText");
