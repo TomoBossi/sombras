@@ -303,5 +303,18 @@
         "srcUrl": "https://www.google.com.ar/maps/place/34%C2%B034'17.4%22S+58%C2%B029'00.9%22W/@-34.5712078,-58.4836101,3a,15y,174.05h,87.24t/data=!3m8!1e1!3m6!1s_lRj3UhHwfuF3ksdlujY9Q!2e0!5s20230101T000000!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D2.7550595093423453%26panoid%3D_lRj3UhHwfuF3ksdlujY9Q%26yaw%3D174.04501611889137!7i16384!8i8192!4m4!3m3!8m2!3d-34.57151!4d-58.483584?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D"
       }
     ]
+  },
+  {
+    "latitude": -34.574464,
+    "longitude": -58.487275,
+    "description": "Ni siquiera estoy seguro de que esta sea una sombra, solamente quería sentir algo (? Por el lugar en donde está, no se la puede ver desde Street View",
+    "images": [
+      {
+        "epoch": 1761571860,
+        "url": "https://drive.google.com/thumbnail?id=1PAfqPk8BxN6e2910dtt9KFEp3DoLYV1Q&sz=w1000",
+        "src": "Propia",
+        "thumbnailOffset": -5
+      }
+    ]
   }
 ]
