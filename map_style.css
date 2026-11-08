@@ -23,8 +23,13 @@ body {
   background-color: #1e1e1e;
 }
 
+body {
+  display: flex;
+}
+
 #map {
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   height: 100%;
   background-color: #1e1e1e;
   z-index: 1;

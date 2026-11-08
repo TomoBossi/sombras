@@ -316,5 +316,49 @@
         "thumbnailOffset": -5
       }
     ]
+  },
+  {
+    "latitude": -32.892564,
+    "longitude": -68.847753,
+    "description": "La primera y única sombra registrada en Mendoza, aporte de F. Notable que mi hermano habitó justo el tiempo y lugar necesario para verla, poco después de pintada y poco antes de borrada (es curioso que el cartel siga estando aunque la sombra ya no). También es la explicación definitiva sobre la existencia de las sombras en general. Son o bien un tributo a Charly (por la portada de su álbum Clics Modernos), o directamente al trabajo de Richard Hambleton (el artista que pintó la sombra detrás de Charly en esa portada). La verdad debería haberme dado cuenta de esto por mi propia cuenta mucho antes de siquiera crear esta página. Pero si hubiese sido así capaz la página directamente no existiría, y eso es mucho más aburrido.",
+    "images": [
+      {
+        "epoch": 1765923418,
+        "url": "https://drive.google.com/thumbnail?id=1mlais6LTLxVMZY19A06Ymyh4xYaCA2c1&sz=w1000",
+        "src": "Contribución (F)",
+        "thumbnailOffset": -8
+      },
+      {
+        "epoch": 1780282800,
+        "url": "https://drive.google.com/thumbnail?id=1N2e8qJSkJhXZB4W6NTb_kOwAqiVkXgaK&sz=w1000",
+        "src": "Google Street View",
+        "srcUrl": "https://www.google.com/maps/@-32.8924935,-68.8477296,3a,75y,219.08h,83.5t/data=!3m8!1e1!3m6!1sKweALTZFOQbZjVlCrloNgQ!2e0!5s20260601T000000!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D6.503326829107024%26panoid%3DKweALTZFOQbZjVlCrloNgQ%26yaw%3D219.07534614722726!7i16384!8i8192?entry=ttu"
+      },
+      {
+        "epoch": 1722481200,
+        "url": "https://drive.google.com/thumbnail?id=1ElSxe3pfr6zohwJ3hsvvapC4L1pU9FIm&sz=w1000",
+        "src": "Google Street View",
+        "srcUrl": "https://www.google.com/maps/@-32.89248,-68.8477187,3a,75y,219.08h,83.5t/data=!3m8!1e1!3m6!1sff3UMCL6omeBvOS1YeeUjA!2e0!5s20240801T000000!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D6.503326829107024%26panoid%3Dff3UMCL6omeBvOS1YeeUjA%26yaw%3D219.07534614722726!7i16384!8i8192?entry=ttu"
+      }
+    ]
+  },
+  {
+    "latitude": -34.6137837,
+    "longitude": -58.4170913,
+    "description": "Primera y única sombra registrada hasta ahora fuera en CABA y fuera de la Villurca. La ejecución es buena: tamaño simil adulto, escondida en una indentación, pies sobre la tierra. Definitivamente podría asustar a un perseguido. El corazón pintado, igual que en la de Monroe y Ceretti. Y con una sonrisa, además. Igual, en retrospectiva, a la de Charly/Hambleton. También, por estar en pleno Almagro y sobre una avenida bastante transitada, seguramente esta sea la que Viqui me comentó que vio una vez desde un bondi.",
+    "images": [
+      {
+        "epoch": 1793723348,
+        "url": "https://drive.google.com/thumbnail?id=1vIXYjVRARhMPDgXGmgb-Y-t121FKZ_fq&sz=w1000",
+        "src": "Propia",
+        "thumbnailOffset": -4
+      },
+      {
+        "epoch": 1685588400,
+        "url": "https://drive.google.com/thumbnail?id=1xPYO_cRO5R33a6dPMeG43Ik7AmnvPz85&sz=w1000",
+        "src": "Google Street View",
+        "srcUrl": "https://www.google.com/maps/@-34.6137837,-58.4170913,26a,30y,155.46h,85.29t/data=!3m8!1e1!3m6!1sddd2JiCvJHEQK4zT4WcRIA!2e0!5s20230601T000000!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D4.709635202415853%26panoid%3Dddd2JiCvJHEQK4zT4WcRIA%26yaw%3D155.45690643740056!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D"
+      }
+    ]
   }
 ]

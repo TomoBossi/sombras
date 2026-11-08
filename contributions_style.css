@@ -1,11 +1,9 @@
 .contributions-justify-wrapper {
   height: 100%;
-  max-width: min(28%, 500px);
+  width: min(28%, 500px);
+  flex-shrink: 0;
+  order: 1;
   display: grid;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
   font-size: 10px;
   user-select: none;
 }

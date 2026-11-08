@@ -24,11 +24,7 @@ function setBackgroundWithRetry(element, url) {
   setSrcWithRetry(img, url);
 }
 
-const map = L.map("map", {
-  center: [-34.57644572703189, -58.47911533206378],
-  zoom: 15,
-  attributionControl: false
-});
+const map = L.map("map", {attributionControl: false});
 
 L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
   maxNativeZoom: 16,
@@ -61,6 +57,8 @@ fetch("data.json")
         showEntry(entry);
       });
     });
+
+    map.fitBounds(data.map(entry => [entry.latitude, entry.longitude]), { padding: [30, 30] });
   });
 
 function showEntry(entry) {
