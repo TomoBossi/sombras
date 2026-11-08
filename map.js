@@ -1,6 +1,28 @@
 let currentEntry;
 let currentImageIndex = 0;
 let currentOverlay = false;
+const maxRetries = 5;
+
+// Google Drive rejects bursts of thumbnail requests; retry with exponential backoff + jitter.
+// A retry is dropped if the img's src was changed in the meantime (e.g. overlay closed or next image).
+function setSrcWithRetry(img, url) {
+  let attempts = 0;
+  img.onerror = () => {
+    if (attempts >= maxRetries || !img.getAttribute("src").startsWith(url)) return;
+    attempts++;
+    const delay = 1000 * 2 ** (attempts - 1) + Math.random() * 1000;
+    setTimeout(() => {
+      if (img.getAttribute("src").startsWith(url)) img.src = `${url}&retry=${attempts}`;
+    }, delay);
+  };
+  img.src = url;
+}
+
+function setBackgroundWithRetry(element, url) {
+  const img = new Image();
+  img.onload = () => element.style.backgroundImage = `url("${img.src}")`;
+  setSrcWithRetry(img, url);
+}
 
 const map = L.map("map", {
   center: [-34.57644572703189, -58.47911533206378],
@@ -8,11 +30,11 @@ const map = L.map("map", {
   attributionControl: false
 });
 
-L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-  subdomains: "abcd",
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
+  maxNativeZoom: 16,
   maxZoom: 19,
   tileSize: 256,
-  detectRetina: true
+  attribution: "Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors"
 }).addTo(map);
 
 fetch("data.json")
@@ -23,7 +45,7 @@ fetch("data.json")
 
       const divIconMarkerContent = document.createElement("div");
       divIconMarkerContent.className = "marker-content";
-      divIconMarkerContent.style.backgroundImage = `url("${firstImage.url.split('&sz=')[0] + '&sz=w100'}")`;
+      setBackgroundWithRetry(divIconMarkerContent, firstImage.url.split('&sz=')[0] + '&sz=w100');
       divIconMarkerContent.style.backgroundPosition = `center ${firstImage.thumbnailOffset}px`;
 
       const divIcon = L.divIcon({
@@ -78,7 +100,7 @@ function showImage(entry, index) {
   }
 
   document.getElementById("imageIndexInfo").innerHTML = `Imagen ${index + 1}/${entry.images.length}`;
-  document.getElementById("imageImg").src = image.url;
+  setSrcWithRetry(document.getElementById("imageImg"), image.url);
   const src = image.srcUrl ? `<a href="${image.srcUrl}" target="_blank">${image.src}</a>` : image.src;
   document.getElementById("imageText").innerHTML = `<strong>Fecha:</strong> ${dateStr}<br><strong>Fuente:</strong> ${src}`;
 }

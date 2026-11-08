@@ -108,7 +108,7 @@ function getContributions(submitted=false) {
 
         if (msg.imageUrl) {
           const imageTag = document.createElement("img");
-          imageTag.src = `https://drive.google.com/thumbnail?id=${msg.imageUrl.split("/").slice(-2, -1)[0]}&sz=w1000`;
+          setSrcWithRetry(imageTag, `https://drive.google.com/thumbnail?id=${msg.imageUrl.split("/").slice(-2, -1)[0]}&sz=w1000`);
           messageElement.appendChild(imageTag);
         }
 
